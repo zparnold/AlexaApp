@@ -4,8 +4,6 @@
 
 // Route the incoming request based on type (LaunchRequest, IntentRequest,
 // etc.) The JSON body of the request is provided in the event parameter.
-
-    
 var request = require('request');
 var S = require('string');
 var verseURL = "http://www.esvapi.org/v2/rest/dailyVerse?key=71249ba5b2b33d79&include-footnotes=false&include-verse-numbers=false&include-word-ids=false&include-audio-link=false&include-short-copyright=false";
