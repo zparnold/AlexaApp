@@ -147,7 +147,7 @@ function getWelcomeResponse(callback) {
         else {
             verse = result;
             speechOutput += verse;
-
+            shouldEndSession = true;
             //Because asynchronous calls suck, we have to stick the callback inside of another callback
             callback(sessionAttributes,
                 buildSpeechletResponse(cardTitle, speechOutput, repromptText, shouldEndSession));
@@ -165,7 +165,20 @@ function getVotd(intent, session, callback) {
     var shouldEndSession = true;
     var speechOutput = getVerse();
 
-        repromptText = null;
+    repromptText = "Do you want to hear the verse of the day? Please say yes or no.";
+    getVerse(function(err,result){
+        if(err){
+            verse = "There was an error getting the verse. Please try again";
+        }
+        else {
+            verse = result;
+            speechOutput += verse;
+            shouldEndSession = true;
+            //Because asynchronous calls suck, we have to stick the callback inside of another callback
+            callback(sessionAttributes,
+                buildSpeechletResponse(cardTitle, speechOutput, repromptText, shouldEndSession));
+        }
+    });
 
     callback(sessionAttributes,
         buildSpeechletResponse(cardTitle, speechOutput, repromptText, shouldEndSession));
