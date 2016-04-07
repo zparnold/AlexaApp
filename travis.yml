@@ -5,7 +5,7 @@ deploy:
   access_key_id: "AKIAJSVLXHKEFSD5EZDA"
   secret_access_key:
       secure: T6nQz9SgSA8eFvrKuCIx2nxJhpmEx4Jxf6VsjJ51xeGWBJDLO8knP/Lm1tE07IVN6CFeT6ajOrYt5NRIJgBZqhkwEjH3jOJ6ZYOLFzVIgcuPJefpbcQBAXNuWaEL+d0PDMPQiuCOwi/yrwzTG2fLQlIUCvkjS7CZJNdBb5JAxArT8qeGV0yYYVM9zq2yaLLcmExMihETsDfZOVooEiAJqI4vQ9Swgoa5s1zAwRP524awIw9l+V3aReGoJtQw2AZByv4gH9uker3VtNeuwtXcTPxZwiwD3a1rO1Mu3WOz75UNdfOUfvpL4TRpB3+KClHor7FLW9mzhtucy+K0Vitmx3LAo+UZQXH+yBylG7snXN9mpMeydtxpCM9RofLRjBHEActMOEeebq9+r9H+dtvQ89EnVCSw+Y737tgRR6+rOhZs3Rj5toO7VgXWwTc6834kL5Cwv2AEUMAcfeYzgLo6s9uUmvhnEkeQ0Paxp+zp1tvjMh21F9xdsD9EfkG8t+bIUDg8SfSHamM1e0vfwAIjaNK9TnJk+2cUJ2ZOF2vQ5mjXk7aNVK1e6Sti5sQQoJi4QLFL/DHZ33pwjuum/hJ5QyKW4UttZb7n+JHJzI9NB7IL9ujSTpZSmlNOHq2rrSO9iChVM3WZIRr2nIhqcZyQg1ONJLgifVsHreTAtYQyq9Y=
-  bucket: "S3 Bucket"
+  bucket: "musings"
   skip_cleanup: false
   acl: public_read
   upload-dir: alexa-app
