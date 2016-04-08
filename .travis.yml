@@ -1,12 +1,13 @@
 language: node_js
 node_js:
-  - "4.3"
+- '4.3'
 deploy:
   provider: s3
-  access_key_id: "AKIAJSVLXHKEFSD5EZDA"
+  access_key_id: AKIAIPCAF7YVRQRZCOMQ
   secret_access_key:
-      secure: T6nQz9SgSA8eFvrKuCIx2nxJhpmEx4Jxf6VsjJ51xeGWBJDLO8knP/Lm1tE07IVN6CFeT6ajOrYt5NRIJgBZqhkwEjH3jOJ6ZYOLFzVIgcuPJefpbcQBAXNuWaEL+d0PDMPQiuCOwi/yrwzTG2fLQlIUCvkjS7CZJNdBb5JAxArT8qeGV0yYYVM9zq2yaLLcmExMihETsDfZOVooEiAJqI4vQ9Swgoa5s1zAwRP524awIw9l+V3aReGoJtQw2AZByv4gH9uker3VtNeuwtXcTPxZwiwD3a1rO1Mu3WOz75UNdfOUfvpL4TRpB3+KClHor7FLW9mzhtucy+K0Vitmx3LAo+UZQXH+yBylG7snXN9mpMeydtxpCM9RofLRjBHEActMOEeebq9+r9H+dtvQ89EnVCSw+Y737tgRR6+rOhZs3Rj5toO7VgXWwTc6834kL5Cwv2AEUMAcfeYzgLo6s9uUmvhnEkeQ0Paxp+zp1tvjMh21F9xdsD9EfkG8t+bIUDg8SfSHamM1e0vfwAIjaNK9TnJk+2cUJ2ZOF2vQ5mjXk7aNVK1e6Sti5sQQoJi4QLFL/DHZ33pwjuum/hJ5QyKW4UttZb7n+JHJzI9NB7IL9ujSTpZSmlNOHq2rrSO9iChVM3WZIRr2nIhqcZyQg1ONJLgifVsHreTAtYQyq9Y=
-  bucket: "musings"
-  skip_cleanup: false
-  acl: public_read
+    secure: HFPejYbnFwaqLgUXipgsFxuMeeU7ygpXOyNAKanL0QQsxrVhxuoWQhQk6bjjMfi5W719wbazDyXh6Iecco+mh9J7cMZXaD0s0JmJqSlk/VHBK9aRix2qB/LGjNpWEV6ujeUOeW+qUnKQl+opQohkkE56ihELv9rhQH7jPrPnIK1DgWGGnl+bIKQvroF5PArzS9uovp5Qnv0cbG7zZN5iExDvtGUq9/aovOOaE3Ar4aX9quxjhniI+rRiO/crmvIbOO1H+NCRk95qKC1VAAY/QbW2WzXHu0p1nln9+fT2SmYj4yb/FKCICMnabb1heIqEZleaAFs2jaCZlsolsH5XImzAKy9/mxL2vIVx2zNdmPz/ukGt/NFUJQBLgKYWPSPdF3uqr1b0/Kj2tgYgBYkZ9K/p2rte8S95H/OKFZQ4/JNdNodIbR7T74ARQLu+uAs315nZiaY5ezSs0Q2HFbC4x2opxpDE7GsRweXhu8uhHMcvIK4u/e2Af1yINBrKJ2QPg5aJ1aJEn0rmV8iupythDDSf92K6Jbbh2KNMzJEZnox4yZ5ozopwpl3z6dE9iTaF/PIKDtb7SsW77WNVrZYLLrSZ4XRGPdyhzYIp0x/fyFZWYqZTGbqMTx0udUxxkUXn/9Pv69yxmjyE4iNnS5rWbtswXREiYZJgTwWU3JvJ1ew=
+  bucket: musings
   upload-dir: alexa-app
+  acl: public_read
+  on:
+    repo: zparnold/AlexaApp
