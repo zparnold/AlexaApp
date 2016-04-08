@@ -1,0 +1,25 @@
+{
+  "name": "alexa-app",
+  "version": "1.0.0",
+  "description": "The verse of the day skill for the amazon echo",
+  "main": "index.js",
+  "dependencies": {
+    "request": "^2.70.0",
+    "string": "^3.3.1",
+    "test": "^0.6.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zparnold/AlexaApp.git"
+  },
+  "author": "Zach Arnold",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zparnold/AlexaApp/issues"
+  },
+  "homepage": "https://github.com/zparnold/AlexaApp#readme"
+}
