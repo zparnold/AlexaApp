@@ -1,9 +1,8 @@
-sudo: required
 language: node_js
 node_js:
 - '4.3'
 before_deploy:
-  - ./run_zip.sh
+  - bash ./run_zip.sh
 deploy:
   provider: s3
   access_key_id: AKIAIPCAF7YVRQRZCOMQ

@@ -1,3 +1,2 @@
 zip -r deploy.zip .
-mkdir deploy
-mv deploy.zip deploy/deploy.zip
+mv -f deploy.zip deploy/deploy.zip
