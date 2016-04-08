@@ -193,7 +193,7 @@ function getVerse(callback){
             if (!error && response.statusCode == 200) {
             proccessVerse(body,function(err,result){
                 if (err){
-                    console.log("something went wrong")
+                    console.log("something went wrong: " + err)
                 }
                 else{
                     callback(false,result);

@@ -3,7 +3,7 @@
  */
 // if test function expects second named argument it will be executed
 // in async mode and test will be complete only after callback is called
-
+"use strict";
 var testSpeechletJSON = {
     "session": {
         "sessionId": "SessionId.692b5842-5ee8-4d71-aac3-f4113024b6e6",
@@ -27,8 +27,25 @@ var testSpeechletJSON = {
     "version": "1.0"
 }
 // using nodejs's build in asserts that throw on failure
-var assert = require('assert')
+var assert = require('assert');
+exports['test esv api connection'] = function(){
+    var http = require('http');
+    var google = http.createClient(80, 'www.jeditoolkit.com')
+    var request = google.request('GET', '/', {'host': 'www.jeditoolkit.com'})
+    request.end()
+    request.on('response', function (response) {
+        assert.equal(response.statusCode, 302, 'must redirect') // will log result
+        response.setEncoding('utf8')
+        response.on('data', function (chunk) {
+            assert.notEqual(chunk, 'helo world', 'must be something more inteligent')
+            done() // telling test runner that we're done with this test
+        })
+    })
 
+}
+exports ['test end to end functionality'] = function(){
+    var something = require('../index');
+}
 exports['test that stops execution on first failure'] = function() {
     assert.equal(2 + 2, 4, 'assert fails and test execution stop here')
     assert.equal(3 + 2, 5, 'will never pass this since test failed above')
