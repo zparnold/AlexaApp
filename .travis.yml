@@ -1,12 +1,16 @@
 language: node_js
 node_js:
 - '4.3'
+before_deploy:
+  - run_zip.sh
 deploy:
   provider: s3
   access_key_id: AKIAIPCAF7YVRQRZCOMQ
   secret_access_key:
     secure: HFPejYbnFwaqLgUXipgsFxuMeeU7ygpXOyNAKanL0QQsxrVhxuoWQhQk6bjjMfi5W719wbazDyXh6Iecco+mh9J7cMZXaD0s0JmJqSlk/VHBK9aRix2qB/LGjNpWEV6ujeUOeW+qUnKQl+opQohkkE56ihELv9rhQH7jPrPnIK1DgWGGnl+bIKQvroF5PArzS9uovp5Qnv0cbG7zZN5iExDvtGUq9/aovOOaE3Ar4aX9quxjhniI+rRiO/crmvIbOO1H+NCRk95qKC1VAAY/QbW2WzXHu0p1nln9+fT2SmYj4yb/FKCICMnabb1heIqEZleaAFs2jaCZlsolsH5XImzAKy9/mxL2vIVx2zNdmPz/ukGt/NFUJQBLgKYWPSPdF3uqr1b0/Kj2tgYgBYkZ9K/p2rte8S95H/OKFZQ4/JNdNodIbR7T74ARQLu+uAs315nZiaY5ezSs0Q2HFbC4x2opxpDE7GsRweXhu8uhHMcvIK4u/e2Af1yINBrKJ2QPg5aJ1aJEn0rmV8iupythDDSf92K6Jbbh2KNMzJEZnox4yZ5ozopwpl3z6dE9iTaF/PIKDtb7SsW77WNVrZYLLrSZ4XRGPdyhzYIp0x/fyFZWYqZTGbqMTx0udUxxkUXn/9Pv69yxmjyE4iNnS5rWbtswXREiYZJgTwWU3JvJ1ew=
   bucket: musings
+  skip_cleanup: true
+  local-dir: deploy
   upload-dir: alexa-app
   acl: public_read
   on:
