@@ -4,6 +4,7 @@
   "description": "The verse of the day skill for the amazon echo",
   "main": "index.js",
   "dependencies": {
+    "node-slack": "0.0.7",
     "request": "^2.70.0",
     "string": "^3.3.1"
   },

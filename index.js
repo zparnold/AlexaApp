@@ -1,12 +1,12 @@
-/**
- * This sample shows how to create a simple Lambda function for handling speechlet requests.
- */
 
 // Route the incoming request based on type (LaunchRequest, IntentRequest,
 // etc.) The JSON body of the request is provided in the event parameter.
 var request = require('request');
 var S = require('string');
+var hook_url = 'https://hooks.slack.com/services/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';
 var verseURL = "http://www.esvapi.org/v2/rest/dailyVerse?key=71249ba5b2b33d79&include-footnotes=false&include-verse-numbers=false&include-word-ids=false&include-audio-link=false&include-short-copyright=false";
+var Slack = require('node-slack');
+var slack = new Slack(hook_url);
 exports.handler = function (event, context) {
     try {
         console.log("event.session.application.applicationId=" + event.session.application.applicationId);
@@ -131,6 +131,9 @@ function buildResponse(sessionAttributes, speechletResponse) {
  */
 function getWelcomeResponse(callback) {
     // If we wanted to initialize the session to have some attributes we could add those here.
+    slack.send({
+        text: 'Got Here!!'
+    });
     var verse = "";
     var sessionAttributes = {};
     var cardTitle = "ESV Verse of the Day";

@@ -43,9 +43,6 @@ exports['test esv api connection'] = function(){
     })
 
 }
-exports ['test end to end functionality'] = function(){
-    var something = require('../index');
-}
 exports['test that stops execution on first failure'] = function() {
     assert.equal(2 + 2, 4, 'assert fails and test execution stop here')
     assert.equal(3 + 2, 5, 'will never pass this since test failed above')
